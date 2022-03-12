@@ -2,8 +2,15 @@ package org.tain.test.t01.sample02;
 
 public class Product<T, M> {
 
-	private T kind;
-	private M model;
+	private T kind;  // Car, Tv
+	private M model;  // String
+	
+	public Product() {}
+	
+	public Product(T kind, M model) {
+		this.kind = kind;
+		this.model = model;
+	}
 	
 	public T getKind() {
 		return this.kind;

@@ -12,5 +12,8 @@ public class ProductExampleMain {
 		product2.setKind(new Tv());
 		product2.setModel("Samsung");
 		System.out.println(">>> product2: " + product2);
+		
+		Product<Tv, String> product3 = new Product<>(new Tv(), "LG Smart TV");
+		System.out.println(">>> product3: " + product3);
 	}
 }

@@ -10,7 +10,7 @@ public class StorageImpl<T> implements Storage<T> {
 	}
 	@Override
 	public void add(T item, int index) {
-		array[index] = item;
+		this.array[index] = item;
 	}
 
 	@Override

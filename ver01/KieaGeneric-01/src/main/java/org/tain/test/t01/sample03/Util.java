@@ -3,9 +3,10 @@ package org.tain.test.t01.sample03;
 public class Util {
 
 	public static <T> Box<T> boxing(T t) {
-		Box<T> box = new Box<>();
-		box.set(t);
-		return box;
+		//Box<T> box = new Box<>();
+		//box.set(t);
+		//return box;
+		return new Box<>(t);
 	}
 	
 	public static <K,V> boolean equals(Pair<K,V> p1, Pair<K,V> p2) {

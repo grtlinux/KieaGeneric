@@ -13,5 +13,7 @@ public class HeredityExampleMain {
 		storage1.add(new Tv(), 0);
 		System.out.println(">>> storage1[0]: " + storage1.get(0));
 		
+		ChildProduct<Car, String, String> product2 = new ChildProduct<>(new Car(), "K5", "KIA");
+		System.out.println(">>> product2: " + product2);
 	}
 }
