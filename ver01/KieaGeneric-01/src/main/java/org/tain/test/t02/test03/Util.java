@@ -1,11 +1,8 @@
-package org.tain.test.t01.sample03;
+package org.tain.test.t02.test03;
 
 public class Util {
 
 	public static <T> Box<T> boxing(T t) {
-		//Box<T> box = new Box<>();
-		//box.set(t);
-		//return box;
 		return new Box<>(t);
 	}
 	
