@@ -26,6 +26,7 @@ public class StorageImpl<T> implements Storage<T> {
 			sb.append(String.valueOf(item));
 			sb.append(",");
 		}
+		sb.deleteCharAt(sb.lastIndexOf(","));
 		sb.append("]");
 		return sb.toString();
 	}
