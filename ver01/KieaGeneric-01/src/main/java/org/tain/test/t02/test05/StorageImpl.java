@@ -21,13 +21,25 @@ public class StorageImpl<T> implements Storage<T> {
 	
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		sb.append("[");
-		for (T item : array) {
-			sb.append(String.valueOf(item));
-			sb.append(",");
+		if (!Boolean.TRUE) {
+			sb.append("[");
+			for (T item : array) {
+				sb.append(String.valueOf(item));
+				sb.append(",");
+			}
+			//sb.deleteCharAt(sb.lastIndexOf(","));
+			sb.setLength(sb.length() - 1);
+			sb.append("]");
+		} else {
+			sb.append("[");
+			String prefix = "";
+			for (T item : array) {
+				sb.append(prefix);
+				prefix = ",";
+				sb.append(String.valueOf(item));
+			}
+			sb.append("]");
 		}
-		sb.deleteCharAt(sb.lastIndexOf(","));
-		sb.append("]");
 		return sb.toString();
 	}
 
