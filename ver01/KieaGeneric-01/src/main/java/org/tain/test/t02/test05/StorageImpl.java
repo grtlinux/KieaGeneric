@@ -22,12 +22,13 @@ public class StorageImpl<T> implements Storage<T> {
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		if (!Boolean.TRUE) {
+			String seperator = ", ";
 			sb.append("[");
 			for (T item : array) {
 				sb.append(String.valueOf(item));
-				sb.append(",");
+				sb.append(seperator);
 			}
-			sb.setLength(sb.length() - 1);
+			sb.setLength(sb.length() - seperator.length());
 			//sb.deleteCharAt(sb.lastIndexOf(","));
 			sb.append("]");
 		} else {
