@@ -5,6 +5,7 @@ public class Course<T> {
 	public String name;
 	public T[] students;
 	
+	@SuppressWarnings("unchecked")
 	public Course(String name, int capacity) {
 		this.name = name;
 		this.students = (T[]) new Object[capacity];

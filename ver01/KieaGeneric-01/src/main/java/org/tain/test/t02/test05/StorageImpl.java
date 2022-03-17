@@ -1,5 +1,7 @@
 package org.tain.test.t02.test05;
 
+import java.util.Arrays;
+
 public class StorageImpl<T> implements Storage<T> {
 
 	private T[] array;
@@ -21,6 +23,7 @@ public class StorageImpl<T> implements Storage<T> {
 	
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
+		System.out.println(">>> " + Arrays.toString(this.array));
 		if (!Boolean.TRUE) {
 			String seperator = ", ";
 			sb.append("[");
