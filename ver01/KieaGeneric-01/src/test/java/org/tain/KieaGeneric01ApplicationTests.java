@@ -14,6 +14,7 @@ class KieaGeneric01ApplicationTests {
 	
 	@Test
 	void Hello() {
+		@SuppressWarnings("unused")
 		Account account = null;
 		try {
 			account = new BrokenAccount("Hello");
