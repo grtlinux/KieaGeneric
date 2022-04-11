@@ -1,16 +1,15 @@
-package org.tain.test.t04.test05;
+package org.tain.test.t05.test05;
 
-import org.tain.test.t04.common.Car;
-import org.tain.test.t04.common.Tv;
-import org.tain.test.t05.test05.Storage;
-import org.tain.test.t05.test05.StorageImpl;
+import org.tain.test.t05.common.Car;
+import org.tain.test.t05.common.Tv;
 
 public class TestMain {
 
 	public static void main(String[] args) {
 		ChildProduct<?,?,?> product = null;
+		
 		product = new ChildProduct<>(new Car("SM5"), "SamsungMoters", "Samsung");
-		System.out.println(">> product: " + product);
+		System.out.println(">>> product: " + product);
 		
 		product = new ChildProduct<>(new Tv("SmartTV"), "LGD", "LG");
 		System.out.println(">>> product: " + product);
@@ -25,5 +24,8 @@ public class TestMain {
 		tvStorage.add(new Tv("SmartTV"));
 		tvStorage.add(new Tv("QLED"));
 		System.out.println(">>> tvStorage: " + tvStorage);
+		
+		Storage<Car> storage = new StorageImpl<>("Car-storage");
+		storage.add(new Car("SM5"));
 	}
 }
