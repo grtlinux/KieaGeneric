@@ -9,6 +9,8 @@ public class TestMain {
 	}
 	
 	private static void test03() {
+		System.out.println("\n--- test03 ---");
+		
 		Box<?> box = null;
 		
 		box = new Box<>(new Car("SM5"));
@@ -37,6 +39,8 @@ public class TestMain {
 	}
 	
 	private static void test04() {
+		System.out.println("\n--- test04 ---");
+		
 		Person person1 = new Person("일반인1");
 		Worker worker1 = new Worker("직장인1");
 		Student student1 = new Student("학생1");
@@ -83,6 +87,20 @@ public class TestMain {
 	}
 	
 	private static void test05() {
+		System.out.println("\n--- test05 ---");
 		
+		ChildProduct<?,?,?> product = null;
+		
+		product = new ChildProduct<>(new Car("SM5"), "SamsungMoters", new Company("Samsung"));
+		System.out.println(">>> product: " + product);
+		
+		product = new ChildProduct<>(new Tv("SmartTV"), "LGD", new Company("LG"));
+		System.out.println(">>> product: " + product);
+		
+		StorageImpl<Box<?>> storage = new StorageImpl<>("Box-Storage");
+		storage.add(new Box<>(new Car("SM5")));
+		storage.add(new Box<>(new Tv("QLED")));
+		storage.add(new Box<>(new Tv("SmartTV")));
+		System.out.println(">>> storage: " + storage);
 	}
 }
