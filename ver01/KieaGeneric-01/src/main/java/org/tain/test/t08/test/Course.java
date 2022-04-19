@@ -24,6 +24,6 @@ public class Course<S> {
 	public Vector<S> getStudents() { return this.students; }
 	
 	public String toString() {
-		return String.format("[Course:%s, %s]", this.name, this.students);
+		return String.format("[Course:%s:%s]", this.name, String.valueOf(this.students));
 	}
 }
