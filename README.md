@@ -6,6 +6,7 @@ Kiea Generic project
   - Box
   - Car
   - Tv
+  - Pair
   - Util.boxing
   - Util.pairing
   - Util.equals
@@ -19,6 +20,7 @@ Kiea Generic project
 ---
   - Product
   - ChildProduct
+  - Company
   - Storage
   - StorageImpl
 ---
